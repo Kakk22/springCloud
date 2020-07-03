@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    url: jdbc:mysql://47.107.53.172:3306/db2019?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+mybatis:
+    mapper-locations: classpath*:mapper/*.xml
+    type-aliases-package: com.eiletxie.springcloud.entities
+
+server:
+  port: 8002
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaulZone: http://eureka8761.com:8761/eureka,http://eureka8762.com:8762/eureka
+  instance:
+    instance-id: payment8002
+    prefer-ip-address: true
