@@ -58,4 +58,9 @@ public class PaymentController {
         }
         return new CommonResult(200,"ok",discoveryClient);
     }
+
+    @GetMapping(value = "/lb")
+    public String getPaymentLB(){
+        return servicePort;
+    }
 }
