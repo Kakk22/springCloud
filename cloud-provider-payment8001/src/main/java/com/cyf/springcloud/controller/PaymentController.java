@@ -28,7 +28,7 @@ public class PaymentController {
     @Resource
     private EurekaDiscoveryClient discoveryClient;
 
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public CommonResult get(@PathVariable Long id){
         Payment payment = paymentService.get(id);
         if (payment!=null){
