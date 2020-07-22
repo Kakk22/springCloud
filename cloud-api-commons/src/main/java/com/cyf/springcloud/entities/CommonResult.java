@@ -7,9 +7,6 @@ import lombok.Setter;
  * @author by cyf
  * @date 2020/6/28.
  */
-@Getter
-@Setter
-
 public class CommonResult<T> {
     private Integer code;
     private String message;
@@ -26,5 +23,29 @@ public class CommonResult<T> {
 
     public CommonResult(Integer code, String message) {
         this(code,message,null);
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public T getDate() {
+        return date;
+    }
+
+    public void setDate(T date) {
+        this.date = date;
     }
 }
